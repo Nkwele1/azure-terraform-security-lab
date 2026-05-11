@@ -6,15 +6,15 @@ This project deploys a secure Azure cloud environment using Terraform Infrastruc
 ## Architecture
 The environment includes the following Azure resources deployed and managed entirely through code:
 
-- **Resource Group** — Logical container for all lab resources
-- **Virtual Network** — Enterprise network with a defined address space (10.0.0.0/16)
-- **Subnet** — Segmented network zone (10.0.1.0/24)
-- **Network Security Group** — Firewall with deny-by-default inbound rules enforcing least privilege network access
-- **NSG-Subnet Association** — Binding the security ruleset to the network segment
+- **Resource Group** - Logical container for all lab resources
+- **Virtual Network** - Enterprise network with a defined address space (10.0.0.0/16)
+- **Subnet** - Segmented network zone (10.0.1.0/24)
+- **Network Security Group** - Firewall with deny-by-default inbound rules enforcing least privilege network access
+- **NSG-Subnet Association** - Binding the security ruleset to the network segment
 
 ## Security Design Decisions
-- **Deny by default:** All inbound traffic is blocked unless explicitly permitted, implementing zero trust network principles
-- **Infrastructure as Code:** All resources are version controlled and reproducible, enabling auditable and consistent deployments
+- **Deny by default:** All inbound traffic is blocked unless explicitly permitted, implementing zero-trust network principles
+- **Infrastructure as Code:** All resources are version-controlled and reproducible, enabling auditable and consistent deployments
 - **No hardcoded credentials:** Authentication handled through Azure CLI, keeping secrets out of source control
 
 ## Technologies Used
